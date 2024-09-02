@@ -35,7 +35,14 @@ struct ContentView: View {
                     print("---------------Completed--------------------")
                 })
             }
+            .safeAreaInset(edge: .bottom) {
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundStyle(.pink.opacity(0.6))
+                    .frame(maxWidth: .infinity, maxHeight: 60)
+                    .padding()
+            }
             .listStyle(.automatic)
+            
         }
         .navigationTitle("Episodes")
 //        .onChange(of: mockData) { oldValue, newValue in
